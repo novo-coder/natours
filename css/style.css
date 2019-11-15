@@ -5,19 +5,24 @@ Medium green: #55c57a
 Dark green: #28b485
 */
 
-* {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: Lato, sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
@@ -31,12 +36,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box {
@@ -51,43 +56,42 @@ body {
 .heading-primary {
     color: #fff;
     backface-visibility: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .heading-primary-main {
     display: block;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation: moveInLeft 4s ease-out;
 }
 
 .heading-primary-sub {
     display: block;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 700;
-    letter-spacing: 15px;
-    animation-name: moveInRight;
-    animation-duration: 4s;
-    animation-timing-function: ease-out;
+    letter-spacing: 1.5rem;
+    animation: moveInRight 4s ease-out;
 }
 
 .btn:link, .btn:visited {
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 1rem;
     transition: all 1s;
     position: relative;
+    font-size: 1.6rem;
 }
 
 .btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    transform: translateY(-.5rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
 .btn:active {
-    transform: translateY(-1px);
+    transform: translateY(-.1rem);
 }
 
 .btn-white {
@@ -105,7 +109,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 1rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -125,7 +129,7 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     100% {
         opacity: 1;
@@ -136,7 +140,7 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     100% {
         opacity: 1;
@@ -147,7 +151,7 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(10rem);
     }
     100% {
         opacity: 1;
