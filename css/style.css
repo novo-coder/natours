@@ -96,6 +96,9 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1rem; }
 
+.u-margin-top-big {
+  margin-top: 55rem; }
+
 .btn:link, .btn:visited {
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -120,6 +123,12 @@ body {
   color: #777; }
   .btn--white:after {
     background-color: #fff; }
+
+.btn--green {
+  background-color: #7ed56f;
+  color: #fff; }
+  .btn--green:after {
+    background-color: #7ed56f; }
 
 .btn:after {
   content: '';
@@ -159,18 +168,17 @@ body {
 .card {
   perspective: 150rem;
   position: relative;
-  height: 50rem; }
+  height: 55rem; }
   .card__side {
-    color: #fff;
-    font-size: 2rem;
-    height: 50rem;
+    height: 55rem;
     transition: all 1s ease;
     position: absolute;
-    width: 100%;
     top: 0;
     left: 0;
+    width: 100%;
     backface-visibility: hidden;
     border-radius: 5px;
+    overflow: hidden;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
     .card__side--front {
       background-color: #fff; }
@@ -178,10 +186,75 @@ body {
       transform: rotateY(180deg); }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .card:hover .card__side--back {
-    transform: rotateY(0deg); }
+    transform: rotateY(0); }
+  .card__pic {
+    background-size: cover;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+    .card__pic--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
+      height: 23rem; }
+    .card__pic--2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg);
+      height: 23rem; }
+    .card__pic--3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg);
+      height: 23rem; }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+    .card__details li {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem; }
+      .card__details li:not(last-child) {
+        border-bottom: 1px solid #d7d7d7; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .composition {
   position: relative;
@@ -227,6 +300,28 @@ body {
     color: transparent; }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg); }
+  .story__img {
+    height: 100%; }
+  .story__text {
+    transform: skewX(12deg); }
 
 .row {
   max-width: 96rem;
@@ -295,5 +390,9 @@ body {
 
 .section-tours {
   background-color: #f6f6f6;
-  padding: 20rem 0 55rem 0;
+  padding: 20rem 0 15rem 0;
   margin-top: -10rem; }
+
+.section-stories {
+  position: relative;
+  padding: 15rem 0; }
