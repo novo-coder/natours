@@ -5,7 +5,6 @@
   100% {
     opacity: 1;
     transform: translate(0); } }
-
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -13,7 +12,6 @@
   100% {
     opacity: 1;
     transform: translate(0); } }
-
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -21,7 +19,6 @@
   100% {
     opacity: 1;
     transform: translate(0); } }
-
 *,
 *::after,
 *::before {
@@ -122,30 +119,25 @@ body {
   font-size: 1.6rem;
   border: none;
   cursor: pointer; }
-
 .btn:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:hover::after {
     transform: scaleX(1.2) scaleY(1.5);
     opacity: 0; }
-
 .btn:active, .btn:focus {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
 .btn--white {
   background-color: #fff;
   color: #777; }
   .btn--white:after {
     background-color: #fff; }
-
 .btn--green {
   background-color: #7ed56f;
   color: #fff; }
   .btn--green:after {
     background-color: #7ed56f; }
-
 .btn:after {
   content: '';
   display: inline-block;
@@ -157,7 +149,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all 2s; }
-
 .btn--animated {
   animation: moveInBottom 2s ease-out 2s;
   animation-fill-mode: backwards; }
@@ -170,13 +161,11 @@ body {
   border-bottom: 1px solid #55c57a;
   padding: 5px;
   transition: all 0.5s; }
-
 .btn-text:hover {
   background-color: #55c57a;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
-
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
@@ -322,7 +311,6 @@ body {
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
-
 .form__input {
   font-size: 1.5rem;
   font-family: inherit;
@@ -343,7 +331,6 @@ body {
     border-bottom: 3px solid #ff7730; }
   .form__input::-webkit-input-placeholder {
     color: #777; }
-
 .form__label {
   font-size: 1.2rem;
   font-weight: 700;
@@ -351,25 +338,20 @@ body {
   margin-top: 0.7rem;
   display: block;
   transition: all 0.3s; }
-
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
-
 .form__radio-group {
   width: 49%;
   display: inline-block; }
-
 .form__radio-input {
   display: none; }
-
 .form__radio-label {
   font-size: 1.6rem;
   cursor: pointer;
   position: relative;
   padding-left: 4.5rem; }
-
 .form__radio-button {
   height: 3rem;
   width: 3rem;
@@ -392,9 +374,45 @@ body {
     background-color: #55c57a;
     opacity: 0;
     transition: opacity 0.2s; }
-
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1; }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5000; }
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden; }
+  .popup__left {
+    width: 33.3333%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.6667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: solid #d7d7d7 1px; }
 
 .story {
   width: 75%;
@@ -524,7 +542,6 @@ body {
 
 .navigation__checkbox {
   display: none; }
-
 .navigation__button {
   background-color: #fff;
   height: 7rem;
@@ -537,7 +554,6 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer; }
-
 .navigation__background {
   height: 6rem;
   width: 6rem;
@@ -548,7 +564,6 @@ body {
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
-
 .navigation__nav {
   height: 100vh;
   position: fixed;
@@ -558,7 +573,6 @@ body {
   opacity: 0;
   width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-
 .navigation__list {
   position: absolute;
   top: 50%;
@@ -567,10 +581,8 @@ body {
   list-style: none;
   text-align: center;
   width: 100%; }
-
 .navigation__item {
   margin: 1rem; }
-
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
   font-size: 3rem;
@@ -581,22 +593,48 @@ body {
   text-transform: uppercase;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
   background-size: 220%;
-  transition: all .4s; }
+  transition: all 0.4s; }
   .navigation__link:link span, .navigation__link:visited span {
     margin-right: 1.5rem;
     display: inline-block; }
-
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
   color: #55c57a;
   transform: translateX(1rem); }
-
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(80); }
-
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%; }
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #777;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: all 0.2s; }
+  .navigation__icon::before {
+    top: -0.8rem; }
+  .navigation__icon::after {
+    top: 0.8rem; }
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+.navigation__checkbox:checked + .navigation__button .navigation__icon:after {
+  top: 0;
+  transform: rotate(-135deg); }
 
 .section-about {
   background-color: #f6f6f6;
@@ -634,3 +672,5 @@ body {
   .book__form {
     width: 50%;
     padding: 6rem; }
+
+/*# sourceMappingURL=style.css.map */
